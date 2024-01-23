@@ -15,6 +15,7 @@ const Filters = ({
   const fetchFacilities = async () => {
     try {
       const { data } = await axios.get(`/api/facilities`);
+      console.log(data);
       if (data?.facilities) {
         setList(data.facilities);
       }
